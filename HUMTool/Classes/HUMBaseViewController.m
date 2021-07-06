@@ -37,13 +37,10 @@
 - (void)backClick {
     self.backBtnClickBlock == nil ? : self.backBtnClickBlock();
     if (self.isBackToRootVC) {
-        CocoaDebugWithStr(@"BackToRootVC");
         [self.navigationController popToRootViewControllerAnimated:YES];
     } else if (self.isfromPresentVC) {
-        CocoaDebugWithStr(@"NONav");
         [self dismissViewControllerAnimated:YES completion:nil];
     } else {
-        CocoaDebugWithStr(@"FromOther");
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
@@ -57,6 +54,6 @@
 }
 
 - (void)dealloc {
-    CocoaDebugWithStr(@"dealloc");
+    NSLog(@"dealloc");
 }
 @end
