@@ -2,12 +2,9 @@ PODS:
   - CocoaDebug (1.6.3)
   - HUMTool (0.1.0):
     - CocoaDebug
-    - HUPhotoBrowser
     - LSTPopView
     - MyLayout
     - QMUIKit/QMUIComponents
-  - HUPhotoBrowser (1.4.5):
-    - SVProgressHUD
   - LSTPopView (0.3.10):
     - LSTPopView/Code (= 0.3.10)
     - LSTTimer
@@ -317,7 +314,6 @@ PODS:
     - QMUIKit/QMUICore
     - QMUIKit/QMUILog
   - QMUIKit/QMUIWeakObjectContainer (4.1.3)
-  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - HUMTool (from `../`)
@@ -325,12 +321,10 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CocoaDebug
-    - HUPhotoBrowser
     - LSTPopView
     - LSTTimer
     - MyLayout
     - QMUIKit
-    - SVProgressHUD
 
 EXTERNAL SOURCES:
   HUMTool:
@@ -338,13 +332,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaDebug: 188ea707c3728402e16efffa8d309a4704f1c59a
-  HUMTool: 7eb8d1f600686cb68cd0d1966126d64c949d388d
-  HUPhotoBrowser: 87a8333c111a4e71ebf5400bf66d0eeb522c0098
+  HUMTool: e5a22f9a0bfdc513d8cdc0985aaa7d6b063d6682
   LSTPopView: 9379f00f6ce7d1fc620b50ab00ed3ef97b2d4d52
   LSTTimer: caf8f02ff366ca175cf4c1778d26c166183c1b6f
   MyLayout: 6ca47dbf27648aa011496094cfe1162217e3c912
   QMUIKit: 1063a99f90aedd6e2dd65026ce0df46e6785e67b
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
 PODFILE CHECKSUM: 6ce46d3415c3acfed9ebe9cf3e728702b8bfc1ac
 

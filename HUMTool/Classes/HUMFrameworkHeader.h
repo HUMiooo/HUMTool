@@ -11,7 +11,6 @@
 #import <MyLayout/MyLayout.h>
 #import <QMUIKit/QMUIKit.h>
 #import <LSTPopView/LSTPopView.h>
-#import <HUPhotoBrowser/HUPhotoBrowser.h>
 
 #import "HUMTool.h"//拓展工具类
 #import "HUM_FontTool.h"//字体工具类

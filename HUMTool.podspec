@@ -41,6 +41,5 @@ TODO: Add long description of the pod here.
   s.dependency 'MyLayout'
   s.dependency 'QMUIKit/QMUIComponents'
   s.dependency 'LSTPopView'
-  s.dependency 'HUPhotoBrowser'
   s.dependency 'CocoaDebug', :configurations => ['Debug']
 end
