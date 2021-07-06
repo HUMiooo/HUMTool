@@ -326,7 +326,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HUMTool_Example/Pods-HUMTool_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CocoaDebug/CocoaDebug.framework",
 				"${BUILT_PRODUCTS_DIR}/HUMTool/HUMTool.framework",
 				"${BUILT_PRODUCTS_DIR}/LSTPopView/LSTPopView.framework",
 				"${BUILT_PRODUCTS_DIR}/LSTTimer/LSTTimer.framework",
@@ -335,7 +334,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaDebug.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HUMTool.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSTPopView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSTTimer.framework",

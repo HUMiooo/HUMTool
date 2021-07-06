@@ -18,22 +18,6 @@
 #import "NSString+Price.h"//价格处理拓展
 
 #import "HUMBaseTableViewCell.h"//基于MyLayout 自适应高度TableViewCell
-
-//DebugTool
-#ifdef DEBUG
-@import CocoaDebug;
-#endif
-
-/// Use of '@import' when C++ modules are disabled, consider using -fmodules and -fcxx-modul
-///解决：在target-build settings - Apple Clang - Custom Compiler Flags ，将Other C++ Flags选项debug和release加上-fcxx-modules
-#if DEBUG
-#define CocoaDebugCurrentVCName  [CocoaDebugTool logWithString:[NSString stringWithFormat:@"当前页面名称:%s",__PRETTY_FUNCTION__] color:[UIColor colorWithRed:(236)/255.0 green:(104)/255.0 blue:(104)/255.0 alpha:1.0]]
-#define CocoaDebugWithStr(str)  [CocoaDebugTool logWithString:(str) color:[UIColor colorWithRed:(255)/255.0 green:(255)/255.0 blue:(100)/255.0 alpha:1.0]]
-#else
-#define CocoaDebugCurrentVCName
-#define CocoaDebugWithStr(str)
-#endif
-
 //判断是否属于刘海屏幕
 static inline BOOL isiPhoneX() {
     if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {

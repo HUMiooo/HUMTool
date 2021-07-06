@@ -1,7 +1,5 @@
 PODS:
-  - CocoaDebug (1.6.3)
   - HUMTool (0.1.1):
-    - CocoaDebug
     - LSTPopView
     - MyLayout
     - QMUIKit/QMUIComponents
@@ -320,7 +318,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - CocoaDebug
     - LSTPopView
     - LSTTimer
     - MyLayout
@@ -331,8 +328,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaDebug: 188ea707c3728402e16efffa8d309a4704f1c59a
-  HUMTool: 60cada63cde7c52f68673e07753a6ff069292c13
+  HUMTool: 9639478191d7d87f83f2949a89a32214d7df2cd5
   LSTPopView: 9379f00f6ce7d1fc620b50ab00ed3ef97b2d4d52
   LSTTimer: caf8f02ff366ca175cf4c1778d26c166183c1b6f
   MyLayout: 6ca47dbf27648aa011496094cfe1162217e3c912
