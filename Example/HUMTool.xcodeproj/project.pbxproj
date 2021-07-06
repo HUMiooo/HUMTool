@@ -536,10 +536,12 @@
 			baseConfigurationReference = CB529A2D7741D878DE21F554 /* Pods-HUMTool_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 694NQTGLLW;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HUMTool/HUMTool-Prefix.pch";
 				INFOPLIST_FILE = "HUMTool/HUMTool-Info.plist";
+				MARKETING_VERSION = 0.1.1;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,10 +555,12 @@
 			baseConfigurationReference = B9C0095BF6CDD6C0A6EA53E4 /* Pods-HUMTool_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 694NQTGLLW;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HUMTool/HUMTool-Prefix.pch";
 				INFOPLIST_FILE = "HUMTool/HUMTool-Info.plist";
+				MARKETING_VERSION = 0.1.1;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,6 +1,6 @@
 PODS:
   - CocoaDebug (1.6.3)
-  - HUMTool (0.1.0):
+  - HUMTool (0.1.1):
     - CocoaDebug
     - LSTPopView
     - MyLayout
@@ -332,7 +332,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaDebug: 188ea707c3728402e16efffa8d309a4704f1c59a
-  HUMTool: e5a22f9a0bfdc513d8cdc0985aaa7d6b063d6682
+  HUMTool: 60cada63cde7c52f68673e07753a6ff069292c13
   LSTPopView: 9379f00f6ce7d1fc620b50ab00ed3ef97b2d4d52
   LSTTimer: caf8f02ff366ca175cf4c1778d26c166183c1b6f
   MyLayout: 6ca47dbf27648aa011496094cfe1162217e3c912
