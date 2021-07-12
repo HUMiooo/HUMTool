@@ -18,6 +18,8 @@
 #import "NSString+Price.h"//价格处理拓展
 
 #import "HUMBaseTableViewCell.h"//基于MyLayout 自适应高度TableViewCell
+#import "HUMBaseViewController.h"//基于MyLayout
+#import "HUMBaseTableViewController.h"//基于MyLayout
 //判断是否属于刘海屏幕
 static inline BOOL isiPhoneX() {
     if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
