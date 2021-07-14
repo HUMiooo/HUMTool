@@ -16,10 +16,12 @@
 #import "HUM_FontTool.h"//字体工具类
 #import "HUM_ColorTool.h"//颜色工具类
 #import "NSString+Price.h"//价格处理拓展
+#import "UIView+HUMView.h"//View补充
 
 #import "HUMBaseTableViewCell.h"//基于MyLayout 自适应高度TableViewCell
 #import "HUMBaseViewController.h"//基于MyLayout
 #import "HUMBaseTableViewController.h"//基于MyLayout
+
 //判断是否属于刘海屏幕
 static inline BOOL isiPhoneX() {
     if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
@@ -55,6 +57,7 @@ static inline CGFloat tabbarHeight() {
 static inline CGFloat touchButtonHeight() {
     return (isiPhoneX() ? 34 : 0);
 }
+
 //坐标相关
 #define HUMStatusBarHeight          (statusbarHeight())
 #define HUMNavigationBarHeight      (naviBarHeight())
@@ -63,6 +66,13 @@ static inline CGFloat touchButtonHeight() {
 #define HUMTouchButtonHeight        (touchButtonHeight())
 #define HUMSCRW    ([UIScreen mainScreen].bounds.size.width)
 #define HUMSCRH    ([UIScreen mainScreen].bounds.size.height)
-#define SIZESCALE(r)                HUMSCRW/375.0*(r) //比例
 
+//比例适配
+#define SIZEFIT_375(r)    HUMSCRW/375.0*(r) //比例 6P
+#define SIZEFIT_414(r)    HUMSCRW/414.0*(r) //比例 8P
+
+//系统相关
+#define HUMApp_Name [NSBundle mainBundle].infoDictionary[@"CFBundleDisplayName"]
+#define HUMAPP_Version [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
+#define HUMAPP_Development_Version [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleVersionKey]
 #endif /* HUMFrameworkHeader_h */

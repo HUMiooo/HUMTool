@@ -6,9 +6,9 @@
 
 #import "HUM_FontTool.h"
 
-#define DefaultRegularFont(Size)    [UIFont fontWithName:@"PingFangSC-Regular" size:SIZESCALE(Size)]
-#define DefaultMediumFont(Size)     [UIFont fontWithName:@"PingFangSC-Medium" size:SIZESCALE(Size)]
-#define DefaultBoldFont(Size)       [UIFont fontWithName:@"PingFangSC-Semibold" size:SIZESCALE(Size)]
+#define DefaultRegularFont(Size)    [UIFont fontWithName:@"PingFangSC-Regular" size:SIZEFIT_414(Size)]
+#define DefaultMediumFont(Size)     [UIFont fontWithName:@"PingFangSC-Medium" size:SIZEFIT_414(Size)]
+#define DefaultBoldFont(Size)       [UIFont fontWithName:@"PingFangSC-Semibold" size:SIZEFIT_414(Size)]
 @implementation HUM_FontTool
 /// 预设定主要UI字号
 /// @param HUMCustomFont 字号
