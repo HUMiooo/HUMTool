@@ -32,6 +32,7 @@
     });
     return manager;
 }
+
 - (void)authorizationPresentAlbumViewControllerWithTitle:(NSString *)title
                                         albumContentType:(QMUIAlbumContentType)kAlbumContentType
                                      imageManagerNumType:(HUMImageManagerNumType)kImageManagerNumType

@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 去除字符串中所有的空格和换行
 + (NSString *)removeSpaceAndNewline:(NSString *)str;
 
+/// 手机号码脱敏
+/// @param number 手机号码
++ (NSString *)phoneNumToDensenessWithNumber:(NSString *)number;
+
 /// 计算文本高度
 /// @param text text description
 /// @param width width description

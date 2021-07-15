@@ -7,13 +7,33 @@
 //
 
 #import "HUMAppDelegate.h"
-
+#import <HUMTool.h>
 @implementation HUMAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self initAppColorConfig];
     return YES;
+}
+
+- (void)initAppColorConfig {
+    HUMAppColorManager.defaultManager.HUM_Color_App_ThemeMain = [HUMAppColorManager colorWithCustomColorWithHex:@"#00A9A9"];
+    HUMAppColorManager.defaultManager.HUM_Color_VC_BG = [HUMAppColorManager colorWithCustomColorWithHex:@"#FFFFFF"];
+    
+    HUMAppColorManager.defaultManager.HUM_Color_View_BG = [HUMAppColorManager colorWithCustomColorWithHex:@"#FFFFFF"];
+    HUMAppColorManager.defaultManager.HUM_Color_View_Line = [HUMAppColorManager colorWithCustomColorWithHex:@"#E5E5E5"];
+    HUMAppColorManager.defaultManager.HUM_Color_View_Shadow = [HUMAppColorManager colorWithCustomColorWithRGBA:HUMColorA(0, 0, 0, 0.2)];
+
+    HUMAppColorManager.defaultManager.HUM_Color_Cell_BG = [HUMAppColorManager colorWithCustomColorWithHex:@"#FFFFFF"];
+    HUMAppColorManager.defaultManager.HUM_Color_Cell_Line = [HUMAppColorManager colorWithCustomColorWithHex:@"#E5E5E5"];
+    HUMAppColorManager.defaultManager.HUM_Color_Cell_Shadow = [HUMAppColorManager colorWithCustomColorWithRGBA:HUMColorA(0, 0, 0, 0.2)];
+
+    HUMAppColorManager.defaultManager.HUM_Color_Text_Color_A = [HUMAppColorManager colorWithCustomColorWithHex:@"#222222"];
+    HUMAppColorManager.defaultManager.HUM_Color_Text_Color_B = [HUMAppColorManager colorWithCustomColorWithHex:@"#4D4D4D"];
+    HUMAppColorManager.defaultManager.HUM_Color_Text_Color_C = [HUMAppColorManager colorWithCustomColorWithHex:@"#666666"];
+    HUMAppColorManager.defaultManager.HUM_Color_Text_Color_D = [HUMAppColorManager colorWithCustomColorWithHex:@"#808080"];
+    HUMAppColorManager.defaultManager.HUM_Color_Text_Color_E = [HUMAppColorManager colorWithCustomColorWithHex:@"#B3B3B3"];
+    HUMAppColorManager.defaultManager.HUM_Color_Text_Color_F = [HUMAppColorManager colorWithCustomColorWithHex:@"#CECECE"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

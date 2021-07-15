@@ -14,9 +14,11 @@
 
 #import "HUMTool.h"//拓展工具类
 #import "HUM_FontTool.h"//字体工具类
-#import "HUM_ColorTool.h"//颜色工具类
 #import "NSString+Price.h"//价格处理拓展
 #import "UIView+HUMView.h"//View补充
+
+#import "HUMAppColorManager.h"//颜色管理类
+#import "HUMImageManager.h"//图片拾取器
 
 #import "HUMBaseTableViewCell.h"//基于MyLayout 自适应高度TableViewCell
 #import "HUMBaseViewController.h"//基于MyLayout

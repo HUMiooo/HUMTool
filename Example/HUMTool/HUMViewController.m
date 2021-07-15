@@ -7,21 +7,21 @@
 //
 
 #import "HUMViewController.h"
-
+#import <HUMTool.h>
 @interface HUMViewController ()
 
 @end
 
 @implementation HUMViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = HUMAppColorManager.defaultManager.HUM_Color_App_ThemeMain;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

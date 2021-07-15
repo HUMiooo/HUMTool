@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [HUM_ColorTool colorWithCustomColor:HUMColor_VCBG];
+    self.view.backgroundColor = UIColor.whiteColor;
 }
 
 - (void)backClick {

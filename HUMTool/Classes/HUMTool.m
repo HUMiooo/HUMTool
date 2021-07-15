@@ -32,6 +32,15 @@
     return [strArr componentsJoinedByString:@""];
 }
 
+/// 手机号码脱敏
+/// @param number 手机号码
++ (NSString *)phoneNumToDensenessWithNumber:(NSString *)number {
+    if (number.length > 7) {
+        number = [number stringByReplacingCharactersInRange:NSMakeRange(number.length - 8, 4) withString:@"****"];//防止号码有前缀所以使用倒数第8位开始替换
+    }
+    return number;
+}
+
 + (CGFloat)heightWithString:(NSString *)text withWidth:(CGFloat)width withFont:(UIFont *)font {
     CGSize textSize = CGSizeMake(width, 0);
     NSDictionary *fontDic = @{NSFontAttributeName : font};
