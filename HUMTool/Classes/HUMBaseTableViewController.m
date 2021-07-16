@@ -35,6 +35,26 @@
     }
 }
 
+- (UIImage *)navigationBarShadowImage {
+    return [UIImage qmui_imageWithColor:HUMAppColorManager.defaultManager.HUM_Color_Nav_LineColor];
+}
+
+- (UIColor *)titleViewTintColor {
+    return HUMAppColorManager.defaultManager.HUM_Color_Nav_TitleViewTintColor;
+}
+
+- (UIColor *)navigationBarTintColor {
+    return HUMAppColorManager.defaultManager.HUM_Color_Nav_BarTintColor;
+}
+
+- (UIColor *)navigationBarBarTintColor {
+    return HUMAppColorManager.defaultManager.HUM_Color_Nav_BarBarTintColor;
+}
+
+- (NSString *)backBarButtonItemTitleWithPreviousViewController:(UIViewController *)viewController {
+    return @"";
+}
+
 - (BOOL)preferredNavigationBarHidden {
     return NO;
 }

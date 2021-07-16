@@ -27,8 +27,19 @@ NS_ASSUME_NONNULL_BEGIN
 //-------------------------- VC App ------------------------
 /// App主色调
 @property (nonatomic, strong) UIColor *HUM_Color_App_ThemeMain;
+//-------------------------- Nav ------------------------
+/// nav标题颜色
+@property (nonatomic, strong) UIColor *HUM_Color_Nav_TitleViewTintColor;
+/// nav文字 按钮颜色
+@property (nonatomic, strong) UIColor *HUM_Color_Nav_BarTintColor;
+/// nav背景色
+@property (nonatomic, strong) UIColor *HUM_Color_Nav_BarBarTintColor;
+/// nav底部line颜色
+@property (nonatomic, strong) UIColor *HUM_Color_Nav_LineColor;
+//-------------------------- VC ------------------------
 /// VC背景色
 @property (nonatomic, strong) UIColor *HUM_Color_VC_BG;
+/// VC背景色-Dark
 @property (nonatomic, strong) UIColor *HUM_Color_VC_BG_Dark;
 //-------------------------- View ------------------------
 @property (nonatomic, strong) UIColor *HUM_Color_View_BG;
@@ -45,8 +56,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *HUM_Color_Text_Color_D;
 @property (nonatomic, strong) UIColor *HUM_Color_Text_Color_E;
 @property (nonatomic, strong) UIColor *HUM_Color_Text_Color_F;
-//-------------------------- View ------------------------
-//-------------------------- View ------------------------
+//-------------------------- CustomColor 自定义额外颜色 ------------------------
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_A;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_B;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_C;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_D;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_E;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_F;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_G;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_H;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_I;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_J;
 //-------------------------- View ------------------------
 
 @end
