@@ -6,12 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <HUMTool/HUMTool.h>
-//#import "HUMFrameworkHeader.h"//FrameworkHeader
+#import "HUMFrameworkHeader.h"//FrameworkHeader
 
 #define HUMColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define HUMColorA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 #define HUMHexColor(hex) [UIColor qmui_colorWithHexString:(hex)]
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HUMAppColorManager : NSObject

@@ -18,7 +18,6 @@
 #import "UIView+HUMView.h"//View补充
 
 #import "HUMAppColorManager.h"//颜色管理类
-#import "HUMImageManager.h"//图片拾取器
 
 #import "HUMBaseTableViewCell.h"//基于MyLayout 自适应高度TableViewCell
 #import "HUMBaseViewController.h"//基于MyLayout
