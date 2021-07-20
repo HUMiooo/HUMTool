@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HUMTool'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = 'OC 拓展类 包括宏定义 字体颜色设置 常用工具、VC方法拓展等.'
 
 # This description is used to generate tags and improve search results.
@@ -38,6 +38,7 @@ TODO: Add long description of the pod here.
   
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
+  
   s.dependency 'MyLayout'
   s.dependency 'QMUIKit/QMUIComponents'
   s.dependency 'LSTPopView'
