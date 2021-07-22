@@ -1,5 +1,5 @@
 PODS:
-  - HUMTool (0.2.7):
+  - HUMTool (0.2.8):
     - LSTPopView
     - MyLayout
     - QMUIKit/QMUIComponents
@@ -328,7 +328,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HUMTool: 51a1a505aef3377559b86838b25afaab6d4272cc
+  HUMTool: 14ae31e54093d6e6dcf264dd46a4fe2a53c6b1f3
   LSTPopView: 9379f00f6ce7d1fc620b50ab00ed3ef97b2d4d52
   LSTTimer: caf8f02ff366ca175cf4c1778d26c166183c1b6f
   MyLayout: 6ca47dbf27648aa011496094cfe1162217e3c912
