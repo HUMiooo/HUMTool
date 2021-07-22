@@ -8,18 +8,37 @@
 
 #import "HUMAppDelegate.h"
 #import <HUMTool.h>
+#import "HUMTabBarViewController.h"
+
 @implementation HUMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self initAppColorConfig];
+    
+    [self initWindow];
+    
     return YES;
+}
+
+- (void)initWindow {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = HUMAppColorManager.defaultManager.HUM_Color_VC_BG;
+    self.window.rootViewController = HUMTabBarViewController.new;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)initAppColorConfig {
     HUMAppColorManager.defaultManager.HUM_Color_App_ThemeMain = [HUMAppColorManager colorWithCustomColorWithHex:@"#00A9A9"];
-    HUMAppColorManager.defaultManager.HUM_Color_VC_BG = [HUMAppColorManager colorWithCustomColorWithHex:@"#FFFFFF"];
     
+    HUMAppColorManager.defaultManager.HUM_Color_Nav_TitleViewTintColor = [HUMAppColorManager colorWithCustomColorWithHex:@"#000000"];
+    HUMAppColorManager.defaultManager.HUM_Color_Nav_BarTintColor = [HUMAppColorManager colorWithCustomColorWithHex:@"#000000"];
+    HUMAppColorManager.defaultManager.HUM_Color_Nav_BarBarTintColor = [HUMAppColorManager colorWithCustomColorWithHex:@"#FFFFFF"];
+    HUMAppColorManager.defaultManager.HUM_Color_Nav_LineColor = [HUMAppColorManager colorWithCustomColorWithHex:@"#FFFFFF"];
+
+    HUMAppColorManager.defaultManager.HUM_Color_VC_BG = [HUMAppColorManager colorWithCustomColorWithHex:@"#FFFFFF"];
+    HUMAppColorManager.defaultManager.HUM_Color_VC_BG_Dark = [HUMAppColorManager colorWithCustomColorWithHex:@"#F7F7F7"];
+
     HUMAppColorManager.defaultManager.HUM_Color_View_BG = [HUMAppColorManager colorWithCustomColorWithHex:@"#FFFFFF"];
     HUMAppColorManager.defaultManager.HUM_Color_View_Line = [HUMAppColorManager colorWithCustomColorWithHex:@"#E5E5E5"];
     HUMAppColorManager.defaultManager.HUM_Color_View_Shadow = [HUMAppColorManager colorWithCustomColorWithRGBA:HUMColorA(0, 0, 0, 0.2)];
@@ -34,6 +53,9 @@
     HUMAppColorManager.defaultManager.HUM_Color_Text_Color_D = [HUMAppColorManager colorWithCustomColorWithHex:@"#808080"];
     HUMAppColorManager.defaultManager.HUM_Color_Text_Color_E = [HUMAppColorManager colorWithCustomColorWithHex:@"#B3B3B3"];
     HUMAppColorManager.defaultManager.HUM_Color_Text_Color_F = [HUMAppColorManager colorWithCustomColorWithHex:@"#CECECE"];
+    
+    //红色
+    HUMAppColorManager.defaultManager.HUM_Color_Custom_A = [HUMAppColorManager colorWithCustomColorWithHex:@"#FF5F56"];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -13,7 +13,7 @@
 #import <LSTPopView/LSTPopView.h>
 
 #import "HUMTool.h"//拓展工具类
-#import "HUM_FontTool.h"//字体工具类
+#import "HUMFontTool.h"//字体工具类
 #import "NSString+Price.h"//价格处理拓展
 #import "UIView+HUMView.h"//View补充
 

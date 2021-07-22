@@ -65,6 +65,10 @@
     return @"";
 }
 
+- (BOOL)hidesBottomBarWhenPushed {
+    return YES;
+}
+
 - (BOOL)preferredNavigationBarHidden {
     return NO;
 }
@@ -73,7 +77,4 @@
     return YES;
 }
 
-- (void)dealloc {
-    NSLog(@"dealloc");
-}
 @end

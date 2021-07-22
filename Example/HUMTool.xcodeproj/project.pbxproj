@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DF3097126A9083E000AECD3 /* HUMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3097026A9083E000AECD3 /* HUMTabBarViewController.m */; };
+		4DF3097426A90C3D000AECD3 /* HUMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3097326A90C3D000AECD3 /* HUMNavigationController.m */; };
+		4DF3097A26A919AD000AECD3 /* HUMFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3097926A919AD000AECD3 /* HUMFirstViewController.m */; };
+		4DF3097D26A919B6000AECD3 /* HUMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3097C26A919B6000AECD3 /* HUMSecondViewController.m */; };
+		4DF3098026A919BD000AECD3 /* HUMThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3097F26A919BD000AECD3 /* HUMThirdViewController.m */; };
+		4DF3098326A919C4000AECD3 /* HUMForthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3098226A919C4000AECD3 /* HUMForthViewController.m */; };
 		5EB8AB765B0EE61FE0324174 /* Pods_HUMTool_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4979F1A8171C09A4CBA1A35 /* Pods_HUMTool_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -14,7 +20,6 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* HUMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* HUMAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* HUMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* HUMViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -40,6 +45,18 @@
 		12063B90DC763986CD4B8F5E /* Pods-HUMTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUMTool_Tests.release.xcconfig"; path = "Target Support Files/Pods-HUMTool_Tests/Pods-HUMTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		31EE6C771D7F365489F4E7BA /* Pods_HUMTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HUMTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32471CD4ACA859B3EE11A429 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4DF3096F26A9083E000AECD3 /* HUMTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMTabBarViewController.h; sourceTree = "<group>"; };
+		4DF3097026A9083E000AECD3 /* HUMTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMTabBarViewController.m; sourceTree = "<group>"; };
+		4DF3097226A90C3D000AECD3 /* HUMNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMNavigationController.h; sourceTree = "<group>"; };
+		4DF3097326A90C3D000AECD3 /* HUMNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMNavigationController.m; sourceTree = "<group>"; };
+		4DF3097826A919AD000AECD3 /* HUMFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMFirstViewController.h; sourceTree = "<group>"; };
+		4DF3097926A919AD000AECD3 /* HUMFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMFirstViewController.m; sourceTree = "<group>"; };
+		4DF3097B26A919B6000AECD3 /* HUMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMSecondViewController.h; sourceTree = "<group>"; };
+		4DF3097C26A919B6000AECD3 /* HUMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMSecondViewController.m; sourceTree = "<group>"; };
+		4DF3097E26A919BD000AECD3 /* HUMThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMThirdViewController.h; sourceTree = "<group>"; };
+		4DF3097F26A919BD000AECD3 /* HUMThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMThirdViewController.m; sourceTree = "<group>"; };
+		4DF3098126A919C4000AECD3 /* HUMForthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMForthViewController.h; sourceTree = "<group>"; };
+		4DF3098226A919C4000AECD3 /* HUMForthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMForthViewController.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* HUMTool_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HUMTool_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,8 +67,6 @@
 		6003F59B195388D20070C39A /* HUMTool-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HUMTool-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* HUMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* HUMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* HUMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* HUMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* HUMTool_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HUMTool_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -145,9 +160,19 @@
 			children = (
 				6003F59C195388D20070C39A /* HUMAppDelegate.h */,
 				6003F59D195388D20070C39A /* HUMAppDelegate.m */,
+				4DF3097226A90C3D000AECD3 /* HUMNavigationController.h */,
+				4DF3097326A90C3D000AECD3 /* HUMNavigationController.m */,
+				4DF3096F26A9083E000AECD3 /* HUMTabBarViewController.h */,
+				4DF3097026A9083E000AECD3 /* HUMTabBarViewController.m */,
+				4DF3097826A919AD000AECD3 /* HUMFirstViewController.h */,
+				4DF3097926A919AD000AECD3 /* HUMFirstViewController.m */,
+				4DF3097B26A919B6000AECD3 /* HUMSecondViewController.h */,
+				4DF3097C26A919B6000AECD3 /* HUMSecondViewController.m */,
+				4DF3097E26A919BD000AECD3 /* HUMThirdViewController.h */,
+				4DF3097F26A919BD000AECD3 /* HUMThirdViewController.m */,
+				4DF3098126A919C4000AECD3 /* HUMForthViewController.h */,
+				4DF3098226A919C4000AECD3 /* HUMForthViewController.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* HUMViewController.h */,
-				6003F5A6195388D20070C39A /* HUMViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -374,9 +399,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF3097426A90C3D000AECD3 /* HUMNavigationController.m in Sources */,
 				6003F59E195388D20070C39A /* HUMAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* HUMViewController.m in Sources */,
+				4DF3097126A9083E000AECD3 /* HUMTabBarViewController.m in Sources */,
+				4DF3097A26A919AD000AECD3 /* HUMFirstViewController.m in Sources */,
+				4DF3098326A919C4000AECD3 /* HUMForthViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				4DF3097D26A919B6000AECD3 /* HUMSecondViewController.m in Sources */,
+				4DF3098026A919BD000AECD3 /* HUMThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
