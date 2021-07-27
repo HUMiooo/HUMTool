@@ -10,8 +10,10 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self != nil) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+
         [self createRootLayout];
-    
+        
         _rootLayout.translatesAutoresizingMaskIntoConstraints = NO;
         
         //设置布局视图的autolayout约束，这里是用iOS9提供的约束设置方法，您也可以用低级版本设置，以及用masonry来进行设置。
@@ -28,4 +30,5 @@
 - (void)createRootLayout {
 
 }
+
 @end
