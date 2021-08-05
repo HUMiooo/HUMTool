@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HUMTool'
-  s.version          = '0.2.9'
+  s.version          = '0.3.0'
   s.summary          = 'OC 拓展类 包括宏定义 字体颜色设置 常用工具、VC方法拓展等.'
   s.description      = 'HUMTool'
 

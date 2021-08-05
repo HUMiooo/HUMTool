@@ -18,8 +18,6 @@
 /// @param price 价格
 + (NSString *)moneyWithMoneyNoZero:(NSString *)price;
 
-+ (NSString *)notNull:(NSString *)string;
-
 /// 去除无效0
 /// @param number 传入数值
 + (NSString *)removeAllZeroByString:(NSString *)number;

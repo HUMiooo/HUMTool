@@ -48,13 +48,6 @@
     }
 }
 
-+ (NSString *)notNull:(NSString *)string {
-    if (string.length == 0) {
-        return @"--";
-    }
-    return string;
-}
-
 + (NSString*)removeAllZeroByString:(NSString *)number{
     NSString * outNumber = [NSString stringWithFormat:@"%@",@(number.floatValue)];
     return outNumber;
