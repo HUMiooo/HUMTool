@@ -10,6 +10,13 @@
 
 @implementation HUMBaseTableViewController
 
+- (HUMBaseVCConfig *)config {
+    if (!_config) {
+        _config = HUMBaseVCConfig.new;
+    }
+    return _config;
+}
+
 - (void)initTableView {
     [super initTableView];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -22,49 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
-}
-
-- (void)backClick {
-    self.backBtnClickBlock == nil ? : self.backBtnClickBlock();
-    if (self.isBackToRootVC) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    } else if (self.isfromPresentVC) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    } else {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-}
-
-- (UIImage *)navigationBarShadowImage {
-    return [UIImage qmui_imageWithColor:HUMAppColorManager.defaultManager.HUM_Color_Nav_LineColor];
-}
-
-- (UIColor *)titleViewTintColor {
-    return HUMAppColorManager.defaultManager.HUM_Color_Nav_TitleViewTintColor;
-}
-
-- (UIColor *)navigationBarTintColor {
-    return HUMAppColorManager.defaultManager.HUM_Color_Nav_BarTintColor;
-}
-
-- (UIColor *)navigationBarBarTintColor {
-    return HUMAppColorManager.defaultManager.HUM_Color_Nav_BarBarTintColor;
-}
-
-- (NSString *)backBarButtonItemTitleWithPreviousViewController:(UIViewController *)viewController {
-    return @"";
-}
-
-- (BOOL)hidesBottomBarWhenPushed {
-    return YES;
-}
-
-- (BOOL)preferredNavigationBarHidden {
-    return NO;
-}
-
-- (BOOL)shouldCustomizeNavigationBarTransitionIfHideable {
-    return YES;
 }
 
 @end

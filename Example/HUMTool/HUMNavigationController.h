@@ -6,11 +6,10 @@
 //  Copyright © 2021 HUMiooo. All rights reserved.
 //
 
-#import <QMUIKit/QMUIKit.h>
-
+#import <HBDNavigationController.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HUMNavigationController : QMUINavigationController
+@interface HUMNavigationController : HBDNavigationController
 
 @end
 

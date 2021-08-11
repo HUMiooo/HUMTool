@@ -11,6 +11,8 @@
 #import <MyLayout/MyLayout.h>
 #import <QMUIKit/QMUIKit.h>
 #import <LSTPopView/LSTPopView.h>
+#import <HBDNavigationBar/HBDNavigationBar.h>
+#import <HBDStatusBar/UIViewController+StatusBar.h>
 
 #import "HUMTool.h"//拓展工具类
 #import "HUMFontTool.h"//字体工具类
@@ -58,6 +60,9 @@ static inline CGFloat tabbarHeight() {
 static inline CGFloat touchButtonHeight() {
     return (isiPhoneX() ? 34 : 0);
 }
+
+//弱引用
+#define HUMWeak(class, weakClass) __weak typeof(class) weakClass = class;
 
 //坐标相关
 #define HUMStatusBarHeight          (statusbarHeight())

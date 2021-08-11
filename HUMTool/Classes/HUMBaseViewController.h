@@ -5,18 +5,19 @@
 
 #import <QMUIKit/QMUIKit.h>
 #import "HUMFrameworkHeader.h"//FrameworkHeader
+#import "HUMBaseVCConfig.h"
+#import <HBDNavigationBar/UIViewController+HBD.h>
 @interface HUMBaseViewController : QMUICommonViewController
+/// 基础根视图
 @property (nonatomic, strong) MyFrameLayout *frameLayout;
-/// 点击返回按钮
-@property (nonatomic, copy) void(^backBtnClickBlock)(void);
-/// 是否需要返回rootVC 默认NO
-@property (nonatomic, assign) BOOL isBackToRootVC;
-/// 是否presentViewController跳转 默认NO
-@property (nonatomic, assign) BOOL isfromPresentVC;
+/// VC配置
+@property (nonatomic, strong) HUMBaseVCConfig *config;
 
 /// 设置页面默认Config
 - (void)setDefaultConfig;
 
-- (void)backClick;
-
+/// 设置scrollView自动调整
+/// @param scrollView scrollView description
+/// @param isOn 是否开启
+- (void)setScrollViewContentInsetAdjustmentBehaviorWithScrollView:(UIScrollView *)scrollView isOn:(BOOL)isOn;
 @end

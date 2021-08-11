@@ -1,5 +1,9 @@
 PODS:
-  - HUMTool (0.3.0):
+  - HBDNavigationBar (1.8.0)
+  - HBDStatusBar (1.2.0)
+  - HUMTool (1.0.0):
+    - HBDNavigationBar
+    - HBDStatusBar
     - LSTPopView
     - MyLayout
     - QMUIKit/QMUIComponents
@@ -318,6 +322,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - HBDNavigationBar
+    - HBDStatusBar
     - LSTPopView
     - LSTTimer
     - MyLayout
@@ -328,7 +334,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HUMTool: 38869c9a23249cd4f364aad21e67b1a5b139ae68
+  HBDNavigationBar: 8a24d0348ad4371614569e3d015d46e41824b061
+  HBDStatusBar: c20ec077f26fa09948399d55d91d5900378494a7
+  HUMTool: 385a512a5008ffccfb01bb4cd1674fc8e4af2827
   LSTPopView: 9379f00f6ce7d1fc620b50ab00ed3ef97b2d4d52
   LSTTimer: caf8f02ff366ca175cf4c1778d26c166183c1b6f
   MyLayout: 6ca47dbf27648aa011496094cfe1162217e3c912
@@ -336,4 +344,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 6ce46d3415c3acfed9ebe9cf3e728702b8bfc1ac
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2

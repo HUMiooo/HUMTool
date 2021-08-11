@@ -5,14 +5,9 @@
 
 #import <QMUIKit/QMUIKit.h>
 #import "HUMFrameworkHeader.h"//FrameworkHeader
+#import "HUMBaseVCConfig.h"
 @interface HUMBaseTableViewController : QMUICommonTableViewController
-/// 点击返回按钮
-@property (nonatomic, copy) void(^backBtnClickBlock)(void);
+/// VC配置
+@property (nonatomic, strong) HUMBaseVCConfig *config;
 
-/// 是否需要返回rootVC 默认NO
-@property (nonatomic, assign) BOOL isBackToRootVC;
-/// 是否presentViewController跳转 默认NO
-@property (nonatomic, assign) BOOL isfromPresentVC;
-
-- (void)backClick;
 @end

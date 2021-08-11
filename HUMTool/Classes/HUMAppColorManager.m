@@ -6,13 +6,9 @@
 //
 
 #import "HUMAppColorManager.h"
-@interface HUMAppColorManager ()
-
-@end
-
 static HUMAppColorManager *manager;
-
 @implementation HUMAppColorManager
+/// 色彩管理器全局单例
 + (HUMAppColorManager *)defaultManager {
     if (!manager) {
         static HUMAppColorManager *manager = nil;
@@ -25,35 +21,43 @@ static HUMAppColorManager *manager;
     return manager;
 }
 
-/// 设置配置色
-/// @param Hex Hex
-+ (UIColor *)colorWithCustomColorWithHex:(NSString *)Hex {
+/// 根据UIUserInterfaceStyle设置对应颜色
+/// @param lightHex 浅色模式
+/// @param darkHex 暗黑模式
+/// @param defaultHex iOS13以下默认颜色
++ (UIColor *)colorWithLightHex:(nonnull NSString *)lightHex
+                       darkHex:(nonnull NSString *)darkHex
+                    defaultHex:(nonnull NSString *)defaultHex {
     if (@available(iOS 13.0, *)) {
         UIColor *color = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
             if ([[UITraitCollection currentTraitCollection] userInterfaceStyle] == UIUserInterfaceStyleLight) {
-                return HUMHexColor(Hex);
+                return HUMHexColor(lightHex);
             } else {
-                return HUMHexColor(Hex);
+                return HUMHexColor(darkHex);
             }
         }];
         return color;
-    } else {
-        return HUMHexColor(Hex);
     }
+    return HUMHexColor(defaultHex);
 }
 
-+ (UIColor *)colorWithCustomColorWithRGBA:(UIColor *)RGBA {
+/// 根据UIUserInterfaceStyle设置对应颜色
+/// @param lightRGBA 浅色模式
+/// @param darkRGBA 暗黑模式
+/// @param defaultRGBA iOS13以下默认颜色
++ (UIColor *)colorWithLightRGBA:(nonnull UIColor *)lightRGBA
+                       darkRGBA:(nonnull UIColor *)darkRGBA
+                    defaultRGBA:(nonnull UIColor *)defaultRGBA {
     if (@available(iOS 13.0, *)) {
         UIColor *color = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
             if ([[UITraitCollection currentTraitCollection] userInterfaceStyle] == UIUserInterfaceStyleLight) {
-                return RGBA;
+                return lightRGBA;
             } else {
-                return RGBA;
+                return darkRGBA;
             }
         }];
         return color;
-    } else {
-        return RGBA;
     }
+    return defaultRGBA;
 }
 @end

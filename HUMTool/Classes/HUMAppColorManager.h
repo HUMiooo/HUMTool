@@ -16,31 +16,27 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HUMAppColorManager : NSObject
 
+/// 色彩管理器全局单例
 + (HUMAppColorManager *)defaultManager;
 
-/// 设置配置色
-/// @param Hex Hex description
-+ (UIColor *)colorWithCustomColorWithHex:(NSString *)Hex;
+/// 根据UIUserInterfaceStyle设置对应颜色
+/// @param lightHex 浅色模式
+/// @param darkHex 暗黑模式
+/// @param defaultHex iOS13以下默认颜色
++ (UIColor *)colorWithLightHex:(nonnull NSString *)lightHex darkHex:(nonnull NSString *)darkHex defaultHex:(nonnull NSString *)defaultHex;
 
-+ (UIColor *)colorWithCustomColorWithRGBA:(UIColor *)RGBA;
+/// 根据UIUserInterfaceStyle设置对应颜色
+/// @param lightRGBA 浅色模式
+/// @param darkRGBA 暗黑模式
+/// @param defaultRGBA iOS13以下默认颜色
++ (UIColor *)colorWithLightRGBA:(nonnull UIColor *)lightRGBA darkRGBA:(nonnull UIColor *)darkRGBA defaultRGBA:(nonnull UIColor *)defaultRGBA;
 
-//-------------------------- VC App ------------------------
+//========================= 常用颜色设置 =========================
 /// App主色调
 @property (nonatomic, strong) UIColor *HUM_Color_App_ThemeMain;
-//-------------------------- Nav ------------------------
-/// nav标题颜色
-@property (nonatomic, strong) UIColor *HUM_Color_Nav_TitleViewTintColor;
-/// nav文字 按钮颜色
-@property (nonatomic, strong) UIColor *HUM_Color_Nav_BarTintColor;
-/// nav背景色
-@property (nonatomic, strong) UIColor *HUM_Color_Nav_BarBarTintColor;
-/// nav底部line颜色
-@property (nonatomic, strong) UIColor *HUM_Color_Nav_LineColor;
-//-------------------------- VC ------------------------
-/// VC背景色
-@property (nonatomic, strong) UIColor *HUM_Color_VC_BG;
-/// VC背景色-Dark
-@property (nonatomic, strong) UIColor *HUM_Color_VC_BG_Dark;
+//-------------------------- Tabbar ------------------------
+@property (nonatomic, strong) UIColor *HUM_Color_Tab_Normal;
+@property (nonatomic, strong) UIColor *HUM_Color_Tab_Selected;
 //-------------------------- View ------------------------
 @property (nonatomic, strong) UIColor *HUM_Color_View_BG;
 @property (nonatomic, strong) UIColor *HUM_Color_View_Line;
@@ -67,8 +63,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *HUM_Color_Custom_H;
 @property (nonatomic, strong) UIColor *HUM_Color_Custom_I;
 @property (nonatomic, strong) UIColor *HUM_Color_Custom_J;
-//-------------------------- View ------------------------
-
 @end
 
 NS_ASSUME_NONNULL_END

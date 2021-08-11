@@ -8,14 +8,8 @@
 @end
 
 @implementation HUMBaseViewController
-
-- (MyFrameLayout *)frameLayout {
-    if (!_frameLayout) {
-        _frameLayout = [MyFrameLayout new];
-        _frameLayout.backgroundColor = UIColor.whiteColor;
-        _frameLayout.insetsPaddingFromSafeArea = ~UIRectEdgeBottom;  //默认情况下底部的安全区会和布局视图的底部padding进行叠加，当这样设置后底部安全区将不会叠加到底部的padding上去。
-    }
-    return _frameLayout;
+- (void)viewDidLoad {
+    [super viewDidLoad];
 }
 
 - (void)initSubviews {
@@ -23,58 +17,89 @@
     [self setDefaultConfig];
 }
 
+- (HUMBaseVCConfig *)config {
+    if (!_config) {
+        _config = HUMBaseVCConfig.new;
+    }
+    return _config;
+}
+
+- (MyFrameLayout *)frameLayout {
+    if (!_frameLayout) {
+        _frameLayout = MyFrameLayout.new;
+        _frameLayout.backgroundColor = UIColor.clearColor;
+    }
+    return _frameLayout;
+}
+
 /// 设置页面默认Config
 - (void)setDefaultConfig {
-    self.view.backgroundColor = UIColor.whiteColor;
-    self.edgesForExtendedLayout = UIRectEdgeNone;  //设置视图控制器中的视图尺寸不延伸到导航条或者工具条下面
     self.view = self.frameLayout;
+    self.view.backgroundColor = self.config.HUM_Color_VC_BG;
+    //======================== StatusBar ========================
+    /// 是否隐藏状态栏
+    self.hbd_statusBarHidden = self.config.isHiddenStatusBar;
+    /// 状态栏类型
+    (self.config.HUM_statusBarStyle == UIStatusBarStyleLightContent) ? (self.hbd_blackBarStyle = YES) : (self.hbd_blackBarStyle = NO);
+    //======================== NavBar ========================
+    /// 是否隐藏nav
+    self.hbd_barHidden = self.config.isHiddenNav;
+    /// 是否隐藏navShadow
+    self.hbd_barShadowHidden = self.config.isHiddenNavShadow;
+    /// nav背景图片
+    self.hbd_barImage = self.config.HUM_Image_Nav_BGImage;
+    /// nav背景颜色
+    self.hbd_barTintColor = self.config.HUM_Color_Nav_BarBarTintColor;
+    /// nav按钮颜色
+    self.hbd_tintColor = self.config.HUM_Color_Nav_BarTintColor;
+    /// 导航栏标题属性
+    self.hbd_titleTextAttributes = self.config.HUM_Attributes_Nav_titleText;
+    /// 导航栏背景透明度
+    self.hbd_barAlpha = self.config.HUM_Color_Nav_barAlpha;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)backClick {
-    self.backBtnClickBlock == nil ? : self.backBtnClickBlock();
-    if (self.isBackToRootVC) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    } else if (self.isfromPresentVC) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+/// 设置导航栏按钮
+- (void)setupNavigationItems {
+    [super setupNavigationItems];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+    backItem.tintColor = self.config.HUM_Color_Nav_BarTintColor;
+    if (self.config.HUM_Image_Nav_BackImage) {
+        if (self.config.HUM_Color_Nav_BarTintColor) {
+            self.navigationController.navigationBar.backIndicatorImage = [self.config.HUM_Image_Nav_BackImage qmui_imageWithTintColor:self.config.HUM_Color_Nav_BarTintColor];
+            self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [self.config.HUM_Image_Nav_BackImage qmui_imageWithTintColor:self.config.HUM_Color_Nav_BarTintColor];
+        } else {
+            self.navigationController.navigationBar.backIndicatorImage = [self.config.HUM_Image_Nav_BackImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [self.config.HUM_Image_Nav_BackImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        }
+    }
+    if (self.config.HUM_String_Nav_BackText) {
+        backItem.title = self.config.HUM_String_Nav_BackText;
+    }
+    if (!self.config.HUM_Image_Nav_BackImage && !self.config.HUM_String_Nav_BackText) {
+        return;
     } else {
-        [self.navigationController popViewControllerAnimated:YES];
+        self.navigationItem.backBarButtonItem = backItem;
     }
 }
 
-- (UIImage *)navigationBarShadowImage {
-    return [UIImage qmui_imageWithColor:HUMAppColorManager.defaultManager.HUM_Color_Nav_LineColor];
+/// 设置scrollView自动调整
+/// @param scrollView scrollView description
+/// @param isOn 是否开启
+- (void)setScrollViewContentInsetAdjustmentBehaviorWithScrollView:(UIScrollView *)scrollView isOn:(BOOL)isOn {
+    if (@available(iOS 13.0, *)) {
+        scrollView.automaticallyAdjustsScrollIndicatorInsets = isOn;
+    } else {
+        scrollView.contentInsetAdjustmentBehavior = isOn ? UIScrollViewContentInsetAdjustmentAutomatic : UIScrollViewContentInsetAdjustmentNever;
+    }
 }
 
-- (UIColor *)titleViewTintColor {
-    return HUMAppColorManager.defaultManager.HUM_Color_Nav_TitleViewTintColor;
-}
-
-- (UIColor *)navigationBarTintColor {
-    return HUMAppColorManager.defaultManager.HUM_Color_Nav_BarTintColor;
-}
-
-- (UIColor *)navigationBarBarTintColor {
-    return HUMAppColorManager.defaultManager.HUM_Color_Nav_BarBarTintColor;
-}
-
-- (NSString *)backBarButtonItemTitleWithPreviousViewController:(UIViewController *)viewController {
-    return @"";
-}
-
-- (BOOL)hidesBottomBarWhenPushed {
-    return YES;
-}
-
-- (BOOL)preferredNavigationBarHidden {
-    return NO;
-}
-
-- (BOOL)shouldCustomizeNavigationBarTransitionIfHideable {
-    return YES;
+/// 设置状态栏隐藏
+- (BOOL)prefersStatusBarHidden {
+    if (@available(iOS 13.0, *)) {
+        return self.config.isHiddenStatusBar;
+    } else {
+        return NO;
+    }
 }
 
 @end

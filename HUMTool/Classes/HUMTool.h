@@ -22,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param number 手机号码
 + (NSString *)phoneNumToDensenessWithNumber:(NSString *)number;
 
+/// 验证手机号
+/// @param mobile mobile description
++ (BOOL)valiMobile:(NSString *)mobile;
+
 /// 计算文本高度
 /// @param text text description
 /// @param width width description

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2F8D5126C21E660087C02C /* HUMSonBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F8D5026C21E660087C02C /* HUMSonBTableViewCell.m */; };
+		4DEF1E6B26BCE4AF0055B5F8 /* HUMFirstSonAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF1E6A26BCE4AF0055B5F8 /* HUMFirstSonAViewController.m */; };
+		4DEF1E7A26BCE9BA0055B5F8 /* HUMFirstSonBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF1E7926BCE9BA0055B5F8 /* HUMFirstSonBViewController.m */; };
+		4DEF1E7D26BD01830055B5F8 /* HUMDarkVCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF1E7C26BD01830055B5F8 /* HUMDarkVCConfig.m */; };
+		4DEF1E8026BD01920055B5F8 /* HUMLightVCConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF1E7F26BD01920055B5F8 /* HUMLightVCConfig.m */; };
 		4DF3097126A9083E000AECD3 /* HUMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3097026A9083E000AECD3 /* HUMTabBarViewController.m */; };
 		4DF3097426A90C3D000AECD3 /* HUMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3097326A90C3D000AECD3 /* HUMNavigationController.m */; };
 		4DF3097A26A919AD000AECD3 /* HUMFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF3097926A919AD000AECD3 /* HUMFirstViewController.m */; };
@@ -45,6 +50,16 @@
 		12063B90DC763986CD4B8F5E /* Pods-HUMTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUMTool_Tests.release.xcconfig"; path = "Target Support Files/Pods-HUMTool_Tests/Pods-HUMTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		31EE6C771D7F365489F4E7BA /* Pods_HUMTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HUMTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32471CD4ACA859B3EE11A429 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4D2F8D4F26C21E660087C02C /* HUMSonBTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMSonBTableViewCell.h; sourceTree = "<group>"; };
+		4D2F8D5026C21E660087C02C /* HUMSonBTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMSonBTableViewCell.m; sourceTree = "<group>"; };
+		4DEF1E6926BCE4AF0055B5F8 /* HUMFirstSonAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMFirstSonAViewController.h; sourceTree = "<group>"; };
+		4DEF1E6A26BCE4AF0055B5F8 /* HUMFirstSonAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMFirstSonAViewController.m; sourceTree = "<group>"; };
+		4DEF1E7826BCE9BA0055B5F8 /* HUMFirstSonBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMFirstSonBViewController.h; sourceTree = "<group>"; };
+		4DEF1E7926BCE9BA0055B5F8 /* HUMFirstSonBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMFirstSonBViewController.m; sourceTree = "<group>"; };
+		4DEF1E7B26BD01830055B5F8 /* HUMDarkVCConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMDarkVCConfig.h; sourceTree = "<group>"; };
+		4DEF1E7C26BD01830055B5F8 /* HUMDarkVCConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMDarkVCConfig.m; sourceTree = "<group>"; };
+		4DEF1E7E26BD01920055B5F8 /* HUMLightVCConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMLightVCConfig.h; sourceTree = "<group>"; };
+		4DEF1E7F26BD01920055B5F8 /* HUMLightVCConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMLightVCConfig.m; sourceTree = "<group>"; };
 		4DF3096F26A9083E000AECD3 /* HUMTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMTabBarViewController.h; sourceTree = "<group>"; };
 		4DF3097026A9083E000AECD3 /* HUMTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUMTabBarViewController.m; sourceTree = "<group>"; };
 		4DF3097226A90C3D000AECD3 /* HUMNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUMNavigationController.h; sourceTree = "<group>"; };
@@ -110,6 +125,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2F8D4E26C21E540087C02C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D2F8D4F26C21E660087C02C /* HUMSonBTableViewCell.h */,
+				4D2F8D5026C21E660087C02C /* HUMSonBTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4D76E0E026C3991000B6387D /* Config配置 */ = {
+			isa = PBXGroup;
+			children = (
+				4DEF1E7B26BD01830055B5F8 /* HUMDarkVCConfig.h */,
+				4DEF1E7C26BD01830055B5F8 /* HUMDarkVCConfig.m */,
+				4DEF1E7E26BD01920055B5F8 /* HUMLightVCConfig.h */,
+				4DEF1E7F26BD01920055B5F8 /* HUMLightVCConfig.m */,
+			);
+			name = "Config配置";
+			sourceTree = "<group>";
+		};
+		4DEF1E6726BCE44C0055B5F8 /* TestVC */ = {
+			isa = PBXGroup;
+			children = (
+				4DEF1E6826BCE48B0055B5F8 /* FirstVC */,
+				4DEF1E8326BD1C240055B5F8 /* SecondVC */,
+				4DEF1E8426BD1C2D0055B5F8 /* ThirdVC */,
+				4DEF1E8526BD1C360055B5F8 /* ForthVC */,
+			);
+			name = TestVC;
+			sourceTree = "<group>";
+		};
+		4DEF1E6826BCE48B0055B5F8 /* FirstVC */ = {
+			isa = PBXGroup;
+			children = (
+				4DF3097826A919AD000AECD3 /* HUMFirstViewController.h */,
+				4DF3097926A919AD000AECD3 /* HUMFirstViewController.m */,
+				4DEF1E6926BCE4AF0055B5F8 /* HUMFirstSonAViewController.h */,
+				4DEF1E6A26BCE4AF0055B5F8 /* HUMFirstSonAViewController.m */,
+				4DEF1E7826BCE9BA0055B5F8 /* HUMFirstSonBViewController.h */,
+				4DEF1E7926BCE9BA0055B5F8 /* HUMFirstSonBViewController.m */,
+				4D2F8D4E26C21E540087C02C /* View */,
+			);
+			name = FirstVC;
+			sourceTree = "<group>";
+		};
+		4DEF1E8326BD1C240055B5F8 /* SecondVC */ = {
+			isa = PBXGroup;
+			children = (
+				4DF3097B26A919B6000AECD3 /* HUMSecondViewController.h */,
+				4DF3097C26A919B6000AECD3 /* HUMSecondViewController.m */,
+			);
+			name = SecondVC;
+			sourceTree = "<group>";
+		};
+		4DEF1E8426BD1C2D0055B5F8 /* ThirdVC */ = {
+			isa = PBXGroup;
+			children = (
+				4DF3097E26A919BD000AECD3 /* HUMThirdViewController.h */,
+				4DF3097F26A919BD000AECD3 /* HUMThirdViewController.m */,
+			);
+			name = ThirdVC;
+			sourceTree = "<group>";
+		};
+		4DEF1E8526BD1C360055B5F8 /* ForthVC */ = {
+			isa = PBXGroup;
+			children = (
+				4DF3098126A919C4000AECD3 /* HUMForthViewController.h */,
+				4DF3098226A919C4000AECD3 /* HUMForthViewController.m */,
+			);
+			name = ForthVC;
+			sourceTree = "<group>";
+		};
 		54E90168C43D5D25B75EF60C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,14 +251,8 @@
 				4DF3097326A90C3D000AECD3 /* HUMNavigationController.m */,
 				4DF3096F26A9083E000AECD3 /* HUMTabBarViewController.h */,
 				4DF3097026A9083E000AECD3 /* HUMTabBarViewController.m */,
-				4DF3097826A919AD000AECD3 /* HUMFirstViewController.h */,
-				4DF3097926A919AD000AECD3 /* HUMFirstViewController.m */,
-				4DF3097B26A919B6000AECD3 /* HUMSecondViewController.h */,
-				4DF3097C26A919B6000AECD3 /* HUMSecondViewController.m */,
-				4DF3097E26A919BD000AECD3 /* HUMThirdViewController.h */,
-				4DF3097F26A919BD000AECD3 /* HUMThirdViewController.m */,
-				4DF3098126A919C4000AECD3 /* HUMForthViewController.h */,
-				4DF3098226A919C4000AECD3 /* HUMForthViewController.m */,
+				4D76E0E026C3991000B6387D /* Config配置 */,
+				4DEF1E6726BCE44C0055B5F8 /* TestVC */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -351,6 +432,8 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HUMTool_Example/Pods-HUMTool_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HBDNavigationBar/HBDNavigationBar.framework",
+				"${BUILT_PRODUCTS_DIR}/HBDStatusBar/HBDStatusBar.framework",
 				"${BUILT_PRODUCTS_DIR}/HUMTool/HUMTool.framework",
 				"${BUILT_PRODUCTS_DIR}/LSTPopView/LSTPopView.framework",
 				"${BUILT_PRODUCTS_DIR}/LSTTimer/LSTTimer.framework",
@@ -359,6 +442,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HBDNavigationBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HBDStatusBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HUMTool.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSTPopView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSTTimer.framework",
@@ -403,10 +488,15 @@
 				6003F59E195388D20070C39A /* HUMAppDelegate.m in Sources */,
 				4DF3097126A9083E000AECD3 /* HUMTabBarViewController.m in Sources */,
 				4DF3097A26A919AD000AECD3 /* HUMFirstViewController.m in Sources */,
+				4DEF1E7A26BCE9BA0055B5F8 /* HUMFirstSonBViewController.m in Sources */,
 				4DF3098326A919C4000AECD3 /* HUMForthViewController.m in Sources */,
+				4DEF1E8026BD01920055B5F8 /* HUMLightVCConfig.m in Sources */,
+				4D2F8D5126C21E660087C02C /* HUMSonBTableViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				4DEF1E7D26BD01830055B5F8 /* HUMDarkVCConfig.m in Sources */,
 				4DF3097D26A919B6000AECD3 /* HUMSecondViewController.m in Sources */,
 				4DF3098026A919BD000AECD3 /* HUMThirdViewController.m in Sources */,
+				4DEF1E6B26BCE4AF0055B5F8 /* HUMFirstSonAViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
