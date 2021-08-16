@@ -1,92 +1,43 @@
 //
-//  HUMFirstSonBViewController.m
+//  HUMSecondSonTableViewController.m
 //  HUMTool_Example
 //
-//  Created by Humioo on 2021/8/6.
+//  Created by Humioo on 2021/8/16.
 //  Copyright © 2021 HUMiooo. All rights reserved.
 //
 
-#import "HUMFirstSonBViewController.h"
-#import "HUMFirstSonAViewController.h"
-
+#import "HUMSecondSonTableViewController.h"
 #import "HUMDarkVCConfig.h"
 #import "HUMLightVCConfig.h"
 
 #import "HUMSonBTableViewCell.h"
-static NSString *HUMSonBTableViewCellID = @"HUMSonBTableViewCell";
-@interface HUMFirstSonBViewController ()<QMUITableViewDelegate, QMUITableViewDataSource>
-@property (nonatomic, strong) QMUILabel *topLabel;
-@property (nonatomic, strong) QMUILabel *bottomLabel;
-@property (nonatomic, strong) QMUITableView *tableView;
+@interface HUMSecondSonTableViewController ()
+
 @end
 
-@implementation HUMFirstSonBViewController
+@implementation HUMSecondSonTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    if (self.type == 1) {
+        [self setScrollViewContentInsetAdjustmentBehaviorWithScrollView:self.tableView isOn:NO];
+    } else {
+        [self setScrollViewContentInsetAdjustmentBehaviorWithScrollView:self.tableView isOn:YES];
+    }
 }
 
 - (void)initSubviews {
     [super initSubviews];
-    self.tableView.myMargin = 0;
-    [self.view addSubview:self.tableView];
-    [self.view addSubview:self.topLabel];
-    [self.view addSubview:self.bottomLabel];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"test" style:(UIBarButtonItemStylePlain) target:self action:@selector(pushToNext)];
 }
 
 - (void)pushToNext {
-    HUMFirstSonBViewController *vc = HUMFirstSonBViewController.new;
+    HUMSecondSonTableViewController *vc = HUMSecondSonTableViewController.new;
     vc.title = @"Light-Random";
     vc.config = HUMLightVCConfig.defaultConfig;
     vc.type = 1;
     [self.navigationController qmui_pushViewController:vc animated:YES completion:nil];
-}
-
-#pragma mark - Lazy UI -
-- (QMUILabel *)topLabel {
-    if (!_topLabel) {
-        _topLabel = [[QMUILabel alloc] qmui_initWithFont:[HUMFontTool HUM_fontSize:15 fontType:HUMFontTypeMedium] textColor:UIColor.qmui_randomColor];
-        _topLabel.backgroundColor = UIColor.qmui_randomColor;
-        _topLabel.text = @"位于frameLayout可使用位置顶部";
-        _topLabel.mySize = CGSizeMake(MyLayoutSize.wrap, 88);
-        _topLabel.textAlignment = NSTextAlignmentCenter;
-        _topLabel.myTop = 0;
-        _topLabel.myCenterX = 0;
-    }
-    return _topLabel;
-}
-
-- (QMUILabel *)bottomLabel {
-    if (!_bottomLabel) {
-        _bottomLabel = [[QMUILabel alloc] qmui_initWithFont:[HUMFontTool HUM_fontSize:15 fontType:HUMFontTypeMedium] textColor:UIColor.qmui_randomColor];
-        _bottomLabel.backgroundColor = UIColor.qmui_randomColor;
-        _bottomLabel.text = @"位于frameLayout可使用位置底部";
-        _bottomLabel.mySize = CGSizeMake(MyLayoutSize.wrap, 88);
-        _bottomLabel.textAlignment = NSTextAlignmentCenter;
-        _bottomLabel.myBottom = 0;
-        _bottomLabel.myCenterX = 0;
-    }
-    return _bottomLabel;
-}
-
-- (QMUITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[QMUITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = HUMAppColorManager.defaultManager.HUM_Color_App_ThemeMain;
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        if (self.type == 1) {
-            [self setScrollViewContentInsetAdjustmentBehaviorWithScrollView:_tableView isOn:NO];
-        } else {
-            [self setScrollViewContentInsetAdjustmentBehaviorWithScrollView:_tableView isOn:YES];
-        }
-        //是否从nav顶部计算
-        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_tableView registerClass:[HUMSonBTableViewCell class] forCellReuseIdentifier:HUMSonBTableViewCellID];
-    }
-    return _tableView;
 }
 
 #pragma mark -- UITableViewDataSource
@@ -99,9 +50,9 @@ static NSString *HUMSonBTableViewCellID = @"HUMSonBTableViewCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HUMSonBTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HUMSonBTableViewCellID];
+    HUMSonBTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HUMSonBTableViewCell"];
     if (!cell) {
-        cell = [[HUMSonBTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:HUMSonBTableViewCellID];
+        cell = [[HUMSonBTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HUMSonBTableViewCell"];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = UIColor.clearColor;
@@ -134,9 +85,10 @@ static NSString *HUMSonBTableViewCellID = @"HUMSonBTableViewCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row <= 5) {
         self.emptyView.backgroundColor = UIColor.qmui_randomColor;
+        self.tableView.scrollEnabled = NO;
         [self showEmptyViewWithImage:UIImageMake(@"noData_icon_normal") text:@"暂无数据" detailText:nil buttonTitle:@"隐藏空视图" buttonAction:@selector(handleSomething_hideEmptyView)];
     } else {
-        HUMFirstSonBViewController *vc = HUMFirstSonBViewController.new;
+        HUMSecondSonTableViewController *vc = HUMSecondSonTableViewController.new;
         vc.title = @"Light-Random";
         vc.config = HUMLightVCConfig.defaultConfig;
         vc.type = 1;
@@ -147,6 +99,7 @@ static NSString *HUMSonBTableViewCellID = @"HUMSonBTableViewCell";
 #pragma mark - handleSomething -
 - (void)handleSomething_hideEmptyView {
     [self hideEmptyView];
+    self.tableView.scrollEnabled = YES;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

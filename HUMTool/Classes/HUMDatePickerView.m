@@ -37,7 +37,7 @@
 }
 
 - (void)initUI {
-    self.frame = CGRectMake(0, 0, HUMSCRW, HUMSCRH - HUMTouchButtonHeight - HUMStatusAndNavbarHeight);
+    self.frame = CGRectMake(0, 0, HUMSCRW, HUMSCRH - HUMTouchButtonHeight);
     self.backgroundColor = HUMColorA(0, 0, 0, 0.2);
 
     MyRelativeLayout *rootLayout = MyRelativeLayout.new;
@@ -47,10 +47,9 @@
     
     //创建UIDatePicker
     UIDatePicker *picker = UIDatePicker.new;
+    picker.locale = [NSLocale localeWithLocaleIdentifier:@"zh"];
     if (@available(iOS 13.4, *)) {
-        picker.preferredDatePickerStyle = UIDatePickerStyleAutomatic;
-    } else {
-        // Fallback on earlier versions
+        picker.preferredDatePickerStyle = UIDatePickerStyleWheels;
     }
     picker.backgroundColor = UIColor.whiteColor;
     switch (self.type) {
@@ -65,8 +64,8 @@
         default:
             break;
     }
-    picker.myBottom = 15;
-    picker.myLeft = picker.myRight = 15;
+    picker.myBottom = 0;
+    picker.myLeft = picker.myRight = 0;
     picker.minimumDate = self.minimumDate;
     picker.maximumDate = self.maximumDate;
     [picker addTarget:self action:@selector(dateChange:) forControlEvents:UIControlEventValueChanged];
@@ -77,24 +76,17 @@
     
     //headerView
     MyRelativeLayout *headerLayout = MyRelativeLayout.new;
-    headerLayout.padding = UIEdgeInsetsMake(5, 10, 5, 10);
     headerLayout.backgroundColor = UIColor.whiteColor;
     headerLayout.bottomBorderline = [[MyBorderline alloc] initWithColor:HUMAppColorManager.defaultManager.HUM_Color_View_Line thick:1 headIndent:0 tailIndent:0];
-    headerLayout.bottomPos.equalTo(picker.topPos).offset(10);
-    headerLayout.myLeft = headerLayout.myRight = 15;
+    headerLayout.bottomPos.equalTo(picker.topPos);
+    headerLayout.myLeft = headerLayout.myRight = 0;
     headerLayout.myHeight = 44;
-    headerLayout.layer.cornerRadius = 5;
     [rootLayout addSubview:headerLayout];
 
     QMUIButton *cancelBtn = [QMUIButton buttonWithType:UIButtonTypeCustom];
-    [cancelBtn setTitleColor:HUMColor(102, 102, 102) forState:UIControlStateNormal];
+    [cancelBtn setTitleColor:HUMAppColorManager.defaultManager.HUM_Color_App_ThemeMain forState:UIControlStateNormal];
     [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
-    cancelBtn.titleLabel.font = UIFontMake(15);
-    cancelBtn.backgroundColor = UIColor.whiteColor;
-    cancelBtn.layer.cornerRadius = 3;
-    cancelBtn.layer.masksToBounds = YES;
-    cancelBtn.layer.borderColor = HUMColor(204, 204, 204).CGColor;
-    cancelBtn.layer.borderWidth = 1;
+    cancelBtn.titleLabel.font = [HUMFontTool HUM_fontSize:15 fontType:HUMFontTypeRegular];
     cancelBtn.mySize = CGSizeMake(80, 30);
     cancelBtn.myLeft = cancelBtn.myCenterY = 0;
     [cancelBtn addTarget:self action:@selector(cancelAction) forControlEvents:UIControlEventTouchUpInside];
@@ -102,17 +94,14 @@
 
     QMUIButton *sureBtn = [QMUIButton buttonWithType:UIButtonTypeCustom];
     [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
-    [sureBtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-    sureBtn.titleLabel.font = UIFontMake(15);
-    sureBtn.backgroundColor = HUMAppColorManager.defaultManager.HUM_Color_App_ThemeMain;
-    sureBtn.layer.cornerRadius = 3;
-    sureBtn.layer.masksToBounds = YES;
+    [sureBtn setTitleColor:HUMAppColorManager.defaultManager.HUM_Color_App_ThemeMain forState:UIControlStateNormal];
+    sureBtn.titleLabel.font = [HUMFontTool HUM_fontSize:15 fontType:HUMFontTypeRegular];
     sureBtn.mySize = CGSizeMake(80, 30);
     sureBtn.myRight = sureBtn.myCenterY = 0;
     [sureBtn addTarget:self action:@selector(sureAction) forControlEvents:UIControlEventTouchUpInside];
     [headerLayout addSubview:sureBtn];
     
-    QMUILabel *headerTitleLabel = [[QMUILabel alloc] qmui_initWithFont:UIFontMake(16) textColor:HUMAppColorManager.defaultManager.HUM_Color_Text_Color_A];
+    QMUILabel *headerTitleLabel = [[QMUILabel alloc] qmui_initWithFont:[HUMFontTool HUM_fontSize:16 fontType:HUMFontTypeRegular] textColor:HUMAppColorManager.defaultManager.HUM_Color_Text_Color_A];
     headerTitleLabel.text = self.headerTitle;
     headerTitleLabel.textAlignment = NSTextAlignmentCenter;
     headerTitleLabel.leftPos.equalTo(cancelBtn.rightPos).offset(5);

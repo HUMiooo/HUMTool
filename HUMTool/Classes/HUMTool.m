@@ -5,6 +5,12 @@
 #import "HUMTool.h"
 #import <CommonCrypto/CommonDigest.h>
 @implementation HUMTool
++ (BOOL)validateWithInputStr:(NSString *)inputStr regularStr:(NSString *)regularStr {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regularStr];
+    BOOL match = [predicate evaluateWithObject:[HUMTool isNull:inputStr]];
+    return match;
+}
+
 + (NSString *)isNull:(NSString *)getString {
     NSString * str = [NSString stringWithFormat:@"%@",getString];
     if ((str == nil) || [str isEqual:[NSNull class]] ||str.length<1 || [str isEqualToString:@"(null)"] || [str isEqualToString:@"<null>"] || [str isEqualToString:@"null"]) {
@@ -261,14 +267,10 @@
 }
 
 #pragma mark 其他工具
-+ (NSString*)getCurrentTimesOfYYYYMMdd{
-    
++ (NSString*)getCurrentTimesOfyyyyMMdd {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    
     // ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
-    
-    [formatter setDateFormat:@"YYYY-MM-dd"];
-    
+    [formatter setDateFormat:@"yyyy-MM-dd"];
     //现在时间,你可以输出来看下是什么格式
     NSDate *datenow = [NSDate date];
     //----------将nsdate按formatter格式转成nsstring

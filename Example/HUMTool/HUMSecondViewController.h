@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HUMSecondViewController : HUMBaseViewController
+@interface HUMSecondViewController : HUMBaseTableViewController
 
 @end
 

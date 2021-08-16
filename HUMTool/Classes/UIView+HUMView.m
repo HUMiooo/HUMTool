@@ -93,7 +93,6 @@
     }
     gradientLayer.locations = @[@(0.4),@(1.0)];//渐变点
     [gradientLayer setColors:@[(id)[startColor CGColor],(id)[endColor CGColor]]];//渐变数组
-    [self.layer addSublayer:gradientLayer];
     [self.layer insertSublayer:gradientLayer atIndex:0];//注意添加顺序
 }
 

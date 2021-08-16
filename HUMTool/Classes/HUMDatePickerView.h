@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <HUMTool/HUMTool.h>
-NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger) {
     DateType_yyyyMMddHHmmss,
     DateType_yyyyMMddHHmm,
@@ -25,5 +24,3 @@ typedef void(^DatePickerBlock)(NSString *dateString);
 - (instancetype)initWithType:(HUMDatePickerType)type minimumDate:(NSDate *)minimumDate maximumDate:(NSDate *)maximumDate headerTitle:(NSString *)headerTitle;
 - (void)show;
 @end
-
-NS_ASSUME_NONNULL_END

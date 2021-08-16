@@ -8,6 +8,11 @@ typedef void(^MyImageBlock)(UIImage * _Nullable image);
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HUMTool : NSObject
+/// 正则快捷验证
+/// @param inputStr 输入内容
+/// @param regularStr 正则表达式
++ (BOOL)validateWithInputStr:(NSString *)inputStr regularStr:(NSString *)regularStr;
+
 /// 转换空字符串为“”
 /// @param getString 返回结果
 + (NSString *)isNull:(NSString *)getString;
@@ -56,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 其他工具
 /// 获取当前时间
-+ (NSString*)getCurrentTimesOfYYYYMMdd;
++ (NSString*)getCurrentTimesOfyyyyMMdd;
 /// 时间戳转yyyyMMddHHmmss字符串
 /// @param str 13位时间戳
 + (NSString *)getTimeToCurrentTimesWithTimestamp:(NSString *)str;
