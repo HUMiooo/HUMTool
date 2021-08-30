@@ -10,6 +10,11 @@
 
 #define HUMColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define HUMColorA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+//*      hexString 支持以 # 开头和不以 # 开头的 hex 字符串
+//*      #RGB        例如#f0f，等同于#ffff00ff，RGBA(255, 0, 255, 1)
+//*      #ARGB       例如#0f0f，等同于#00ff00ff，RGBA(255, 0, 255, 0)
+//*      #RRGGBB     例如#ff00ff，等同于#ffff00ff，RGBA(255, 0, 255, 1)
+//*      #AARRGGBB   例如#00ff00ff，等同于RGBA(255, 0, 255, 0)
 #define HUMHexColor(hex) [UIColor qmui_colorWithHexString:(hex)]
 
 NS_ASSUME_NONNULL_BEGIN
@@ -23,6 +28,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param lightHex 浅色模式
 /// @param darkHex 暗黑模式
 /// @param defaultHex iOS13以下默认颜色
+///     hexString 支持以 # 开头和不以 # 开头的 hex 字符串
+///     #RGB        例如#f0f，等同于#ffff00ff，RGBA(255, 0, 255, 1)
+///     #ARGB       例如#0f0f，等同于#00ff00ff，RGBA(255, 0, 255, 0)
+///     #RRGGBB     例如#ff00ff，等同于#ffff00ff，RGBA(255, 0, 255, 1)
+///     #AARRGGBB   例如#00ff00ff，等同于RGBA(255, 0, 255, 0)
 + (UIColor *)colorWithLightHex:(nonnull NSString *)lightHex darkHex:(nonnull NSString *)darkHex defaultHex:(nonnull NSString *)defaultHex;
 
 /// 根据UIUserInterfaceStyle设置对应颜色
@@ -63,6 +73,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *HUM_Color_Custom_H;
 @property (nonatomic, strong) UIColor *HUM_Color_Custom_I;
 @property (nonatomic, strong) UIColor *HUM_Color_Custom_J;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_K;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_L;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_M;
+@property (nonatomic, strong) UIColor *HUM_Color_Custom_N;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -60,4 +60,5 @@ static HUMAppColorManager *manager;
     }
     return defaultRGBA;
 }
+
 @end
