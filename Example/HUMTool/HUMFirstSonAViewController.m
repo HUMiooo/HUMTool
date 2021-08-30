@@ -17,6 +17,17 @@
 @end
 
 @implementation HUMFirstSonAViewController
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.frameLayout.insetsPaddingFromSafeArea = UIRectEdgeNone;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if (self.frameLayout.insetsPaddingFromSafeArea == UIRectEdgeNone) {
+        self.frameLayout.insetsPaddingFromSafeArea = UIRectEdgeAll;
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
