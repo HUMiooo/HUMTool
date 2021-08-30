@@ -1,19 +1,12 @@
 PODS:
   - HBDNavigationBar (1.8.0)
   - HBDStatusBar (1.2.0)
-  - HUMTool (1.0.6):
-    - HBDNavigationBar
-    - HBDStatusBar
-    - HUMTool/QMUIResources (= 1.0.6)
-    - LSTPopView
-    - MyLayout
-    - QMUIKit/QMUIComponents
-  - HUMTool/QMUIResources (1.0.6):
+  - HUMTool (1.0.7):
     - HBDNavigationBar
     - HBDStatusBar
     - LSTPopView
     - MyLayout
-    - QMUIKit/QMUIComponents
+    - QMUIKit
   - LSTPopView (0.3.10):
     - LSTPopView/Code (= 0.3.10)
     - LSTTimer
@@ -21,6 +14,12 @@ PODS:
     - LSTTimer
   - LSTTimer (0.2.10)
   - MyLayout (1.9.8)
+  - QMUIKit (4.1.3):
+    - QMUIKit/QMUIComponents (= 4.1.3)
+    - QMUIKit/QMUICore (= 4.1.3)
+    - QMUIKit/QMUILog (= 4.1.3)
+    - QMUIKit/QMUIMainFrame (= 4.1.3)
+    - QMUIKit/QMUIWeakObjectContainer (= 4.1.3)
   - QMUIKit/QMUIComponents (4.1.3):
     - QMUIKit/QMUIComponents/NavigationBarTransition (= 4.1.3)
     - QMUIKit/QMUIComponents/QMUIAlertController (= 4.1.3)
@@ -343,7 +342,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   HBDNavigationBar: 8a24d0348ad4371614569e3d015d46e41824b061
   HBDStatusBar: c20ec077f26fa09948399d55d91d5900378494a7
-  HUMTool: 68ad0abefe57d88a34c9e57bad5f3852aa35e59c
+  HUMTool: e30b3365f4ceb7467808d05b8300844ec598d7d2
   LSTPopView: 9379f00f6ce7d1fc620b50ab00ed3ef97b2d4d52
   LSTTimer: caf8f02ff366ca175cf4c1778d26c166183c1b6f
   MyLayout: 6ca47dbf27648aa011496094cfe1162217e3c912

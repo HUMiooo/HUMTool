@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HUMTool'
-  s.version          = '1.0.6'
+  s.version          = '1.0.7'
   s.summary          = 'OC 拓展类 包括宏定义 字体颜色设置 常用工具、VC方法拓展等.'
   s.description      = 'HUMTool'
 
@@ -31,9 +31,6 @@ Pod::Spec.new do |s|
   s.dependency 'MyLayout'
   s.dependency 'HBDNavigationBar'
   s.dependency 'HBDStatusBar'
-  s.dependency 'QMUIKit/QMUIComponents'
-  s.subspec 'QMUIResources' do |ss|
-    ss.resource_bundles = {'QMUIResources' => ['QMUIKit/QMUIResources/*.*']}
-  end
+  s.dependency 'QMUIKit'
   s.dependency 'LSTPopView'
 end
